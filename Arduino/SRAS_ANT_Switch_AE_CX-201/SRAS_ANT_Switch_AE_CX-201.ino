@@ -16,8 +16,8 @@ Servo meinServo;
 const int servoPin = 18; 
 
 // --- WINKEL-EINSTELLUNGEN ---
-const int winkelAnt1 = 73;   // Position Links
-const int winkelAnt2 = 107;  // Position Rechts
+const int winkelAnt1 = 75;   // Position Links
+const int winkelAnt2 = 105;  // Position Rechts
 
 // Globale Variable speichert den aktuellen Status (1 = Ant1, 2 = Ant2)
 int aktuellePosition = 1; // Startet standardmäßig in der Links (Antenne 1)
