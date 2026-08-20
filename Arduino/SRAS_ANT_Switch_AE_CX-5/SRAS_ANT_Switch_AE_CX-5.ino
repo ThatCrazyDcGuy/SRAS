@@ -2,7 +2,7 @@
 #include <WebServer.h>
 #include <ESP32Servo.h>
 
-// --- Fuer ALBRECHT_CX-201
+// --- Fuer ALBRECHT_CX-5
 // --- Optimal: MH-ET LIVE ESP32MiniKit
 // --- WLAN KONFIGURATION (In Ihr bestehendes Heim-WLAN eintragen) ---
 const char* ssid = "SSID";
