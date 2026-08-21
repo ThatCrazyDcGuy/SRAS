@@ -14,6 +14,7 @@ Dieses Projekt ermöglicht es, einen mechanischen 3-Stellungs-Antennenumschalter
 ![SRAS](/picnvid/AECX05_proto.jpg)
 
  - Die Hassliebe:
+ 
 Oder auch: Warum ich den CX05 nicht mag, aber für Bastelprojekte immer wieder kaufen würde.
 So sieht das Ding original von innen aus und es macht mich traurig.
 
@@ -31,7 +32,10 @@ Und jetzt kennt Ihr den Plan:
 
 ![SRAS](/picnvid/AECX05_uknownow.jpg)
 
+ - Der CX201:
+ 
 Solltet Ihr den CX201 verwenden, kürzt im inneren die Feder für den Umschaltwiderstand. So spart Ihr euch auch einen stärkeren Servo.
+Ihr könnt dem Umbau von oben aber auch direkt im CX201 übernehmen. Da ist es tatsächlich noch einfacher.
 
 ![SRAS](/picnvid/AECX201.jpg)
 
