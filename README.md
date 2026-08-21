@@ -7,6 +7,27 @@ Ein sehr einfacher Fern-Antennenumschalter, basierend auf einem Servo, einem ESP
 
 Dieses Projekt ermöglicht es, einen mechanischen 3-Stellungs-Antennenumschalter vollautomatisch über einen Modellbau-Servo zu steuern. Die Bedienung erfolgt wahlweise über eine responsive Weboberfläche mit Live-Status (AJAX) oder über Terminal-Befehle (`curl`), wodurch sich das System perfekt in Remote-Software wie *AE5900_Remote_V2* integrieren lässt.
 
+## Projektbilder
+
+ - Der Prototyp:
+![SRAS](/picnvid/AECX05_proto.jpg)
+
+ - Die Hassliebe:
+Oder auch: Warum ich den CX05 nicht mag, aber für Bastelprojekte immer wieder kaufen würde.
+So sieht das Ding original von innen aus und es macht mich traurig.
+![SRAS](/picnvid/AECX05_hate.jpg)
+
+Wir räumen also mal auf:
+![SRAS](/picnvid/AECX05_clean.jpg)
+
+Wir montieren:
+![SRAS](/picnvid/AECX05_mount.jpg)
+
+Und jetzt kennt Ihr den Plan:
+![SRAS](/picnvid/AECX05_uknownow.jpg)
+
+
+
 ## ❓ DAS "WARUM"
 Warum habe ich nicht ein Boardlayout mit Relays, Optokopplern, PL Steckern, einem HF-sicheren Gehäuse, Entstörfilter, einer Steuereinheit und all dem anderen Gedöns gebaut?
 Weil ich das immer und immer wieder gemacht habe. Rein aus Spass am Basteln. 
