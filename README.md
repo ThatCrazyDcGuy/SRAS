@@ -28,7 +28,13 @@ Wir montieren:
 ![SRAS](/picnvid/AECX05_mount.jpg)
 
 Und jetzt kennt Ihr den Plan:
+
 ![SRAS](/picnvid/AECX05_uknownow.jpg)
+
+Solltet Ihr den CX201 verwenden, kürzt im inneren die Feder für den Umschaltwiderstand. So spart Ihr euch auch einen stärkeren Servo.
+
+![SRAS](/picnvid/AECX201.jpg)
+
 
 
 
