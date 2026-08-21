@@ -10,17 +10,21 @@ Dieses Projekt ermöglicht es, einen mechanischen 3-Stellungs-Antennenumschalter
 ## Projektbilder
 
  - Der Prototyp:
+ 
 ![SRAS](/picnvid/AECX05_proto.jpg)
 
  - Die Hassliebe:
 Oder auch: Warum ich den CX05 nicht mag, aber für Bastelprojekte immer wieder kaufen würde.
 So sieht das Ding original von innen aus und es macht mich traurig.
+
 ![SRAS](/picnvid/AXCX05_hate.jpg)
 
 Wir räumen also mal auf:
+
 ![SRAS](/picnvid/AXCX05_clean.jpg)
 
 Wir montieren:
+
 ![SRAS](/picnvid/AECX05_mount.jpg)
 
 Und jetzt kennt Ihr den Plan:
