@@ -39,7 +39,11 @@ Ihr könnt dem Umbau von oben aber auch direkt im CX201 übernehmen. Da ist es t
 
 ![SRAS](/picnvid/AECX201.jpg)
 
+ - Der MAAS KAS-3-PL // Diamond CX310A :
+ 
+Auch für dieses Modell habe ich einen passenden Arduino Sketch hochgeladen.
 
+![SRAS](/picnvid/KAS-3-PL.jpg)
 
 
 ## ❓ DAS "WARUM"
