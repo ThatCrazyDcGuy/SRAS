@@ -7,7 +7,8 @@
 // --- WLAN KONFIGURATION (In Ihr bestehendes Heim-WLAN eintragen) ---
 const char* ssid = "SSID";
 const char* password = "PASSWD";
-
+unsigned long letzteWlanPruefung = 0;
+const unsigned long wlanIntervall = 10000;
 
 // --- Webserver Port) ---
 WebServer server(5006); 
@@ -16,8 +17,8 @@ Servo meinServo;
 const int servoPin = 18; 
 
 // --- WINKEL-EINSTELLUNGEN ---
-const int winkelAnt1 = 75;   // Position Links
-const int winkelAnt2 = 105;  // Position Rechts
+const int winkelAnt1 = 73;   // Position Links
+const int winkelAnt2 = 107;  // Position Rechts
 
 // Globale Variable speichert den aktuellen Status (1 = Ant1, 2 = Ant2)
 int aktuellePosition = 1; // Startet standardmäßig in der Links (Antenne 1)
@@ -121,6 +122,7 @@ void setup() {
   // ====================================================================
 
   WiFi.begin(ssid, password);
+  WiFi.setSleep(false); 
   Serial.print("Verbinde mit WLAN");
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
@@ -154,7 +156,23 @@ void setup() {
   server.begin();
 }
 
+
 void loop() {
   server.handleClient();
+
+  unsigned long aktuelleZeit = millis();
+
+  if (aktuelleZeit - letzteWlanPruefung >= wlanIntervall) {
+    letzteWlanPruefung = aktuelleZeit;
+    
+    if (WiFi.status() != WL_CONNECTED) {
+      Serial.println("[WLAN] Verbindung verloren! Versuche automatischen Reconnect...");
+
+      WiFi.disconnect();
+      WiFi.begin();
+
+    }
+  }
+  
   delay(2);
 }
