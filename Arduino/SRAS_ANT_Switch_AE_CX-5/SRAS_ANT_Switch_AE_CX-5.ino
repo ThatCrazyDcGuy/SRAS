@@ -2,12 +2,13 @@
 #include <WebServer.h>
 #include <ESP32Servo.h>
 
-// --- Fuer ALBRECHT_CX-5
+// --- Fuer ALBRECHT_CX-201
 // --- Optimal: MH-ET LIVE ESP32MiniKit
 // --- WLAN KONFIGURATION (In Ihr bestehendes Heim-WLAN eintragen) ---
 const char* ssid = "SSID";
 const char* password = "PASSWD";
-
+unsigned long letzteWlanPruefung = 0;
+const unsigned long wlanIntervall = 10000;
 
 // --- Webserver Port) ---
 WebServer server(5006); 
@@ -76,21 +77,6 @@ String generiereWebseite() {
   return html;
 }
 
-// Zentrale Logik zum Schalten
-// void schaltePosition(int position) {
-//   aktuellePosition = position; 
-//   
-//   if (position == 1) {
-//     meinServo.write(winkelAnt1);
-//     Serial.println("Schalter auf ANTENNE 1 (Links) gedreht.");
-//   } else if (position == 3) {
-//     meinServo.write(winkelAnt3);
-//     Serial.println("Schalter auf ANTENNE 3 (Rechts) gedreht.");
-//   } else {
-//     meinServo.write(winkelAnt2);
-//     Serial.println("Schalter auf ANTENNE 2 (Mitte) gedreht.");
-//   }
-// }
 
 void schaltePosition(int position) {
   aktuellePosition = position; 
@@ -138,6 +124,7 @@ void setup() {
   // ====================================================================
 
   WiFi.begin(ssid, password);
+  WiFi.setSleep(false);
   Serial.print("Verbinde mit WLAN");
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
@@ -171,7 +158,23 @@ void setup() {
   server.begin();
 }
 
+
 void loop() {
   server.handleClient();
+
+  unsigned long aktuelleZeit = millis();
+
+  if (aktuelleZeit - letzteWlanPruefung >= wlanIntervall) {
+    letzteWlanPruefung = aktuelleZeit;
+    
+    if (WiFi.status() != WL_CONNECTED) {
+      Serial.println("[WLAN] Verbindung verloren! Versuche automatischen Reconnect...");
+
+      WiFi.disconnect();
+      WiFi.begin();
+
+    }
+  }
+  
   delay(2);
 }
